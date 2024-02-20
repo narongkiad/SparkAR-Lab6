@@ -1,0 +1,12 @@
+1. open Patch Editor
+2. Drag Drop FaceTracker
+3. rightclick(search -> Unpack)
+4. rightclick(search -> Divide, Multiply, Pack)
+   #Divide(set to 700) -> rightclick(search -> Pack)
+      #Pack(set to 0,0.2)
+         #ไปที่Charactor(ที่ transformations กดลูกศรหน้า Position)
+   #Multiply(set to -1) -> rightclick(search -> Pack)
+      #Pack(set to 0,10)
+         #ไปที่Head(ที่ transformations กดลูกศรหน้า Rotation)
+   #Pack(set to 0,0)
+      #ไปที่Charactor(ที่ transformations กดลูกศรหน้า Rotation)

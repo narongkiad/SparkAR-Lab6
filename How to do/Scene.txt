@@ -1,0 +1,44 @@
+#FaceTracker(add object -> null object -> rename(FaceTracker))
+ - texture extraction(+) -> rename(face)
+
+
+#Background(add object -> null object -> rename(Background))
+ - add object -> plane*2 -> rename(road,city)
+   #Road
+    - materials -> create new material -> rename(materialRoad)
+       #MaterialRoad
+        - shader type -> flat
+        - shader properties -> texture -> new animetion sequence -> rename(roadAnimetion)
+          #RoadAnimetion
+           - texture -> new texture -> (เลือกไฟล์รูปถนนที่แปลงจาก gif to jpg)
+	   - controls -> loop(ติ๊กถูก),fps(25)
+   #City(อาจารให้ใช้หน้าตัวเองเป็น background)
+    - materials -> create new material -> rename(materialCity)
+      #MaterialCity
+       - shader type -> flat
+       - shader properties -> texture -> new texture -> City
+
+
+#Player(add object -> null object -> rename(Player))
+ - add object -> null object -> rename(Charactor)
+   #Charactor
+    - add object -> plane,null object -> rename(body,head)
+      #Body
+       - materials -> create new material -> rename(materialBody)
+	 #MaterialBody
+          - shader type -> flat
+          - shader properties -> texture -> new texture -> Bike
+      #Head
+       - add object -> face mesh,plane*2 -> rename(facemesh,hat,glass)
+	 #facemesh
+          - materials -> create new material -> rename(materialFace)
+            #MaterialFace
+             - shader properties -> texture -> face(จากFaceTracker)
+         #Hat
+	  - materials -> create new material -> rename(materialHat)
+            #MaterialHat
+             - shader properties -> texture -> new texture -> Hat	
+         #Glass
+	  - materials -> create new material -> rename(materialGlass)
+            #MaterialGlass
+             - shader properties -> texture -> new texture -> Glass      
